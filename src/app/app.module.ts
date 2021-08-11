@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from 'src/components/header/header.component';
 import { AdminComponent } from 'src/components/screens/admin/admin.component';
 import { CartComponent } from 'src/components/screens/cart/cart.component';
@@ -32,6 +33,7 @@ import { InputComponent } from 'src/components/input/input.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
