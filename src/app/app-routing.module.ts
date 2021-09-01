@@ -8,16 +8,22 @@ import { ClothingUpdateComponent } from 'src/components/screens/clothing-update/
 import { ClothingComponent } from 'src/components/screens/clothing/clothing.component';
 import { LoginComponent } from 'src/components/screens/login/login.component';
 import { RegisterComponent } from 'src/components/screens/register/register.component';
+import { ShellComponent } from 'src/components/shell/shell.component';
 
 const routes: Routes = [
-  { path: 'clothes', component: ClothesListComponent },
-  { path: 'clothes/:id', component: ClothingComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent },
+  { path: '', component: ShellComponent,
+    children: [
+      { path: 'clothes', component: ClothesListComponent },
+      { path: 'clothes/:id', component: ClothingComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'admin', component: AdminComponent },
+      { path: 'admin/:id', component: ClothingUpdateComponent },
+      { path: '', redirectTo: 'clothes', pathMatch: 'full'}
+    ],
+  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin', component: AdminComponent },
-  { path: 'admin/:id', component: ClothingUpdateComponent },
   { path: '**', component: ClothesListComponent },
 ];
 

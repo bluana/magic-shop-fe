@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from '../components/button/button.component';
 import { InputComponent } from 'src/components/input/input.component';
+import { ShellComponent } from '../components/shell/shell.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { InputComponent } from 'src/components/input/input.component';
     ClothingUpdateComponent,
     HeaderComponent,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    ShellComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
+  exports: [AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
