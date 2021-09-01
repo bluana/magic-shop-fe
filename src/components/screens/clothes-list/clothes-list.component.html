@@ -1,1 +1,18 @@
-<p>clothes-list works!</p>
+<div class="container m-5">
+    <div class="row text-center">
+        <h1>Browse clothes</h1>
+    </div>
+    <div class="row">
+        <app-input>Search</app-input>
+    </div>
+    <div class="row">
+        <div *ngFor="let clothing of clothes"  [routerLink]="['/clothes', clothing.id]" class="col-3 p-3 mb-3">
+            <img [src]="clothing.photo" class="w-100"/>
+            <h4 class="pt-2">{{clothing.name}}</h4>
+            <p class="price">${{clothing.price}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <app-button>More</app-button>
+    </div>
+</div>
