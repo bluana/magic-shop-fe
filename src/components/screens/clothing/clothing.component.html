@@ -1,1 +1,16 @@
-<p>clothing works!</p>
+<div *ngIf="clothing" class="container">
+    <div class="row">
+        <div class="col-8">
+            <img [src]="clothing.photo" class="w-100"/>
+        </div>
+        <div class="col">
+            <h2>{{clothing.name}}</h2>
+            <h3>${{clothing.price}}</h3>
+            <app-button>Add to cart</app-button>
+            <p>Size: {{clothing.size}}</p>
+            <p>Color: {{clothing.color}}</p>
+            <p>Condition: {{clothing.condition}}</p>
+            <p>Description: {{clothing.description}}</p>
+        </div>
+    </div>
+</div>
