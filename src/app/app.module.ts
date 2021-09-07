@@ -12,8 +12,6 @@ import { LoginComponent } from 'src/components/screens/login/login.component';
 import { RegisterComponent } from 'src/components/screens/register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from '../components/button/button.component';
-import { InputComponent } from 'src/components/input/input.component';
 import { ShellComponent } from '../components/shell/shell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -29,8 +27,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminComponent,
     ClothingUpdateComponent,
     HeaderComponent,
-    InputComponent,
-    ButtonComponent,
     ShellComponent
   ],
   imports: [
