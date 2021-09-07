@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from '../components/button/button.component';
 import { InputComponent } from 'src/components/input/input.component';
 import { ShellComponent } from '../components/shell/shell.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ShellComponent } from '../components/shell/shell.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   exports: [AppRoutingModule],
   providers: [],
