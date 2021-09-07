@@ -1,12 +1,12 @@
-<div *ngIf="clothing" class="container">
-    <div class="row">
+<div *ngIf="clothing" class="container mt-5">
+    <div class="row pt-5">
         <div class="col-8">
             <img [src]="clothing.photo" class="w-100"/>
         </div>
         <div class="col">
             <h2>{{clothing.name}}</h2>
             <h3>${{clothing.price}}</h3>
-            <app-button>Add to cart</app-button>
+            <button class="w-100 my-3" mat-raised-button color="accent">Add to cart</button>
             <p>Size: {{clothing.size}}</p>
             <p>Color: {{clothing.color}}</p>
             <p>Condition: {{clothing.condition}}</p>

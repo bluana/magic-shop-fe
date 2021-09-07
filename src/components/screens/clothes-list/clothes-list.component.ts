@@ -9,10 +9,11 @@ import { ApiService } from 'src/services/api/api.service';
 })
 export class ClothesListComponent implements OnInit {
   clothes: Clothing[] = [];
+  searchValue: string = '';
 
   constructor(private apiService: ApiService) {}
 
   async ngOnInit(): Promise<void> {
-    this.clothes = await this.apiService.getClothes();
+    this.clothes = (await this.apiService.getClothes()).filter((clothing: Clothing) => clothing.available ===true);
   }
 }
