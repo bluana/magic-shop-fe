@@ -17,12 +17,12 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  login(email: string, password: string): Promise<any>{
-    return this.http.post(`${this.baseUrl}/login`, {email, password}, this.httpOptions).toPromise();
+  login(user: User): Promise<any>{
+    return this.http.post(`${this.baseUrl}/login`, user, this.httpOptions).toPromise();
   }
 
   register(user: User): Promise<any>{
-    return this.http.put(`${this.baseUrl}/users`, user, this.httpOptions).toPromise();
+    return this.http.post(`${this.baseUrl}/users`, user, this.httpOptions).toPromise();
   }
 
   getClothes(): Promise<Clothing[]>{
