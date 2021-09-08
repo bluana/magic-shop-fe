@@ -2,11 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from 'src/components/header/header.component';
-import { AdminComponent } from 'src/components/screens/admin/admin.component';
 import { CartComponent } from 'src/components/screens/cart/cart.component';
 import { CheckoutComponent } from 'src/components/screens/checkout/checkout.component';
 import { ClothesListComponent } from 'src/components/screens/clothes-list/clothes-list.component';
-import { ClothingUpdateComponent } from 'src/components/screens/clothing-update/clothing-update.component';
 import { ClothingComponent } from 'src/components/screens/clothing/clothing.component';
 import { LoginComponent } from 'src/components/screens/login/login.component';
 import { RegisterComponent } from 'src/components/screens/register/register.component';
@@ -18,10 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table';
-import { DeleteDialogComponent } from '../components/delete-dialog/delete-dialog.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -32,11 +27,8 @@ import { MatSelectModule } from '@angular/material/select';
     CheckoutComponent,
     LoginComponent,
     RegisterComponent,
-    AdminComponent,
-    ClothingUpdateComponent,
     HeaderComponent,
     ShellComponent,
-    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +40,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule,
-    MatDialogModule,
-    MatSelectModule,
+    MatCardModule,
   ],
   exports: [AppRoutingModule],
   providers: [],

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DeleteDialogComponent } from 'src/components/delete-dialog/delete-dialog.component';
+import { DeleteDialogComponent } from 'src/app/admin/delete-dialog/delete-dialog.component';
 import { Clothing } from 'src/models/clothing.model';
 import { ApiService } from 'src/services/api/api.service';
 
