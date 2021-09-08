@@ -16,6 +16,10 @@ import { ShellComponent } from '../components/shell/shell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { DeleteDialogComponent } from '../components/delete-dialog/delete-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { MatInputModule } from '@angular/material/input';
     AdminComponent,
     ClothingUpdateComponent,
     HeaderComponent,
-    ShellComponent
+    ShellComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,11 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatDialogModule,
   ],
   exports: [AppRoutingModule],
   providers: [],

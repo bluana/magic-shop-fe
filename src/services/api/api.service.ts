@@ -33,6 +33,10 @@ export class ApiService {
     return this.http.get<Clothing>(`${this.baseUrl}/clothes/${id}`, this.httpOptions).toPromise();
   }
 
+  createClothing(clothing: Clothing): Promise<any>{
+    return this.http.post(`${this.baseUrl}/clothes`, clothing, this.httpOptions).toPromise();
+  }
+
   updateClothing(id: number, clothing: Clothing): Promise<any>{
     return this.http.put(`${this.baseUrl}/clothes/${id}`, clothing, this.httpOptions).toPromise();
   }
