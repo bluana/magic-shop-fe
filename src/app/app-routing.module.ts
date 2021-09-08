@@ -19,6 +19,7 @@ const routes: Routes = [
       { path: 'checkout', component: CheckoutComponent },
       { path: 'admin', component: AdminComponent },
       { path: 'admin/:id', component: ClothingUpdateComponent },
+      { path: 'admin/new', component: ClothingUpdateComponent },
       { path: '', redirectTo: 'clothes', pathMatch: 'full'}
     ],
   },

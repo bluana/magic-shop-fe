@@ -1,1 +1,36 @@
-<p>clothing-update works!</p>
+<div class="container mt-5">
+    <form [formGroup]="clothingForm" (ngSubmit)="onSubmit()" class="d-grid pt-5">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name" required>
+        </mat-form-field>  
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input matInput type="number" formControlName="price" required>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Available</mat-label>
+            <mat-select formControlName="available" required>
+                <mat-option [value]="true">true</mat-option>
+                <mat-option [value]="false">false</mat-option>
+            </mat-select>
+        </mat-form-field>  
+        <mat-form-field>
+            <mat-label>Size</mat-label>
+            <input matInput type="text" formControlName="size" required>
+        </mat-form-field>  
+        <mat-form-field>
+            <mat-label>Color</mat-label>
+            <input matInput type="text" formControlName="color" required>
+        </mat-form-field>  
+        <mat-form-field>
+            <mat-label>Condition</mat-label>
+            <input matInput type="text" formControlName="condition" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea matInput type="text" formControlName="description" required></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit" [disabled]="!clothingForm.valid">Save</button>
+    </form>
+</div>
